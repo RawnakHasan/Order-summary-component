@@ -1,1 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Red+Hat+Display:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 @import "tailwindcss";
+
+:root {
+  --blue-100: hsl(225, 100%, 94%);
+  --blue-700: hsl(245, 75%, 52%);
+  --blue-50: hsl(225, 100%, 98%);
+  --gray-600: hsl(224, 23%, 55%);
+  --blue-950: hsl(223, 47%, 23%);
+}
+
+@theme {
+  --color-blue-100: var(--blue-100);
+  --color-blue-700: var(--blue-700);
+
+  --color-blue-50: var(--blue-50);
+  --color-gray-600: var(--gray-600);
+  --color-blue-950: var(--blue-950);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--blue-100);
+  background-image: url("/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url("/pattern-background-mobile.svg");
+  }
+}
